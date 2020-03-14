@@ -1,0 +1,30 @@
+chcp 1251
+psql -Uroot -dtest  -- соединиться с БД
+drop database moika2; -- удалить базу данных
+
+-- cоздание БД
+CREATE DATABASE moika2
+  WITH OWNER = root
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'Russian_Russia.1251'
+       LC_CTYPE = 'Russian_Russia.1251'
+       CONNECTION LIMIT = -1;
+
+\l -- список всех БД
+
+-- Создание бекапа базы в виде обычного текстового файла, включая команду для создания БД
+pg_dump -h localhost -p 5432 -U root -F c -b -v -f moika2.backup moika2
+
+-- Восстановление базы данных
+pg_restore -U root -d moika2 --jobs=4 --verbose  moika2.backup
+
+-- Копирование базы данных
+createdb -U root -T moika2 -e moika2deploy 2>aa.txt
+
+
+pg_restore -d postgres --clean --create db.dump
+
+dropdb -U root moika2deploy
+createdb -U root moika2deploy
+psql moika2deploy root  < E:\USERa\madv\Projects\moika2\src\main\resources\data.sq

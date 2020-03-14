@@ -1,0 +1,22 @@
+h1{
+	color: blue;
+}
+
+h2{
+	color:#FF0000;
+}
+
+footer{
+    margin-top:10px;
+}
+.row {
+	/*border: 1px solid green;*/
+}
+
+[class^="col-"] {
+	/*border: 2px solid red;*/
+}
+.leftimg {
+	float:left; /* Выравнивание по левому краю */
+	margin: 7px 30px 7px 0px; /* Отступы вокруг картинки */
+}
