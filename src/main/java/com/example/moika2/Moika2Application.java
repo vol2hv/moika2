@@ -31,7 +31,7 @@ public class Moika2Application {
     public static final String CAPTCHA_URL =
         "https://www.google.com/recaptcha/api/siteverify?secret=%s&response=%s";
 
-   // константы из application.properties
+   // параметры из application.properties
     @Value("${recaptcha.sitekey}")
     private String sitekey ;
     @Value("${recaptcha.secret}")
