@@ -55,7 +55,7 @@ public class Moika2Application {
         if (user == null) {
             Set<Role> roles = new HashSet<> ( Arrays.asList(Role.values()) );
             user = new User("admin",
-                    passwordEncoder.encode(adminpass),true,
+                    passwordEncoder.encode("slon314"),true,
                 "admin@ya.ru","", roles);
             userRepo.save(user);
         }
