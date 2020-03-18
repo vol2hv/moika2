@@ -19,12 +19,12 @@ import java.util.Set;
 @ExtendWith(SpringExtension.class)
 @Slf4j
 class UserRepoTest {
-    private UserRepo repo;
-    private PasswordEncoder passwordEncoder;
     @Autowired
-    public UserRepoTest(UserRepo repo, PasswordEncoder passwordEncoder) {
-        this.repo = repo;
-        this.passwordEncoder = passwordEncoder;
+    private UserRepo repo;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    public UserRepoTest() {
     }
 
     @BeforeEach

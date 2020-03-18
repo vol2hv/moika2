@@ -24,8 +24,9 @@
                 <img src="images/brain.png" class="leftimg"/>
                 <ul>
                     <li>
-                        По <a  href="https://moika2.herokuapp.com/api/">этому адресу</a>
-                        доступен Rest api интерфейс.
+                        По ссылке из меню приложения Rest API отображается через rest-hal-browser.
+                        По адресу ${baseAPI} доступ к Rest API через обычный Rest-client ( Curl например).
+                        В этом случае логин и пароль надо указывать в каждом запросе.
                     </li>
                     <li>
                         Некоторые функции доступны только зарегистрированным пользователям.
