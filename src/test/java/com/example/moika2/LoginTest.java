@@ -61,11 +61,11 @@ public class LoginTest {
     @Test
 //    @Sql(value = {"/create-user-before.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     public void correctLoginTest() throws Exception {
-        User user =  repo.findByUsername("admin");
-        log.info(user.getUsername()) ;
-        log.info(user.getPassword());
-        log.info(passwordEncoder.encode("slon314"));
-        log.info(passwordEncoder.encode("0"));
+//        User user =  repo.findByUsername("admin");
+//        log.info(user.getUsername()) ;
+//        log.info(user.getPassword());
+//        log.info(passwordEncoder.encode("slon314"));
+//        log.info(passwordEncoder.encode("0"));
         this.mockMvc.perform(formLogin().user("admin").password("slon314"))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
