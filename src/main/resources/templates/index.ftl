@@ -24,7 +24,7 @@
                 <img src="images/brain.png" class="leftimg"/>
                 <ul>
                     <li>
-                        По <a  href="https://moika2.herokuapp.com/api/">этому адресу</a>
+                        По <a  href="${baseAPI}">этому адресу</a>
                         доступен Rest api интерфейс.
                     </li>
                     <li>
