@@ -52,7 +52,7 @@
                         <td><a href="${href}" class="link"><i class="fas fa-edit"></i></a></td>
                         <#assign href=baseURL + '/delete?id=${item.id}' />
                         <td>
-                            <a href="${href}"" class="link"><i class="far fa-trash-alt"></i></i></a>
+                            <a href="${href}" class="link"><i class="far fa-trash-alt"></i></a>
                         </td>
                     </tr>
                     </#list>

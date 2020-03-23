@@ -1,4 +1,4 @@
-package com.example.moika2;
+package com.example.moika2.controller;
 
 
 import com.example.moika2.domain.User;
