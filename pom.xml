@@ -95,6 +95,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
         </dependency>
+        <!-- test patch operation need this -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.7</version>
+            <scope>test</scope>
+        </dependency>
 <!--    конец возможно это и не нужно -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
