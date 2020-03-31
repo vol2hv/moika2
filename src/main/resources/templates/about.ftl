@@ -4,7 +4,7 @@
     <div >
         <h1 align="center">Мойка на SpringBoot. </h1>
         <h3 align="center">Сведения о проекте вы можете постотреть
-            <a href="https://github.com/vol2hv/moika2/blob/dev/readme.md">здесь</a>
+            <a href="https://github.com/vol2hv/moika2">здесь</a>
         </h3>
 
     </div>
