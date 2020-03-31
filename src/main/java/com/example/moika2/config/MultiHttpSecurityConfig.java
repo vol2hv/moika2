@@ -25,7 +25,7 @@ public class MultiHttpSecurityConfig  extends WebSecurityConfigurerAdapter {
     private AccessDeniedHandler accessDeniedHandler;
 
     private static final String[] ANONYMOUS_URL_LIST = {"/", "/registration", "/activate/*", "/about",
-            "/static/**","/css/**", "/js/**", "/images/**"};
+            "/static/**","/css/**", "/js/**", "/images/**", "/actuator/**"};
     private static final String[] CLIENT_URL_LIST = {"/client/**"};
     private static final String[] ADMIN_URL_LIST = {"/admin/**"};
 
@@ -67,7 +67,7 @@ public class MultiHttpSecurityConfig  extends WebSecurityConfigurerAdapter {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
-                    .antMatcher("/**")
+//                    .antMatcher("/**")
                     .authorizeRequests()
                         .antMatchers(ANONYMOUS_URL_LIST).permitAll()
 //                .antMatchers(adminUrlList).hasAnyRole("ADMIN")
