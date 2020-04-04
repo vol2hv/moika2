@@ -6,4 +6,4 @@ INSERT INTO public.box(
 	        (102, 'FREE', 'BIG', 'второйй', 'b2'),
 	        (103, 'FREE', 'BIG', 'третий', 'b3');
 
-alter sequence hibernate_sequence restart with 1000;
+-- alter sequence hibernate_sequence restart with 1000;
