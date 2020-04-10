@@ -1,6 +1,5 @@
 package com.example.moika2.service;
 
-
 import com.example.moika2.domain.User;
 import com.example.moika2.repository.UserRepo;
 import lombok.extern.slf4j.Slf4j;
