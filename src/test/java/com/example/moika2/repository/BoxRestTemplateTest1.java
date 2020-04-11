@@ -136,4 +136,19 @@ class BoxRestTemplateTest1 {
         });
     }
 
+    @Order(101)
+    @Test
+    void updateUrlError() throws MalformedURLException {
+        box = new Box("ччч", "Ерунда", BoxStatus.CLOSED, BoxType.SMALL);
+        box.setId(1234567890L);
+        String url = new URL("http://localhost:" + port + "/api/boxes/").toString();
+        HttpEntity<Box> request = new HttpEntity<>(box);
+        ResponseEntity<Box> response = testRestTemplate
+                .exchange(url, HttpMethod.PUT, request, Box.class);
+        log.info("status: {} body: {} boxes: {}",response.getStatusCode(), response.getBody(), repo.findAll().toString());
+//
+//        assertEquals("b102", box.getName() );
+//        assertEquals(response.getStatusCode(), HttpStatus.OK);
+    }
+
 }
