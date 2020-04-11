@@ -1,10 +1,9 @@
-package com.example.moika2.controller;
-/*
-* главный контоллер
-* войдет в продакшен
-* */
+/** главный контоллер
+ * войдет в продакшен
+ */
 
-import com.example.moika2.Moika2Application;
+ package com.example.moika2.controller;
+
 import com.example.moika2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,31 +27,9 @@ public class MainController {
         return "/index";
     }
 
-    // для демонстрации секьюрити.
-    @GetMapping("/admin")
-    public String admin() {
-        return "/admin";
-    }
-
-    @GetMapping("/client")
-    public String user() {
-        return "/client";
-    }
-
     @GetMapping("/about")
 //    @PreAuthorize("hasAuthority('ADMIN')")
     public String about() {
         return "/about";
     }
-    // отображение таблиц системы
-    @GetMapping(Moika2Application.PATH_TABLES_RENDERING)
-    public String table(Model model) {
-        model.addAttribute("base", Moika2Application.PATH_TABLES_RENDERING);
-        return "/table";
-    }
-    @GetMapping("/403")
-    public String error403() {
-        return "/error/403";
-    }
-
 }

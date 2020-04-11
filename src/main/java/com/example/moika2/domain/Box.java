@@ -6,7 +6,10 @@ import com.example.moika2.innerdata.FieldsTypes;
 import com.example.moika2.innerdata.TableRendering;
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -14,7 +17,7 @@ import javax.validation.constraints.NotBlank;
  */
 @Entity
 @Data
-@ToString
+@ToString(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
 @RequiredArgsConstructor
